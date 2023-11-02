@@ -27,10 +27,18 @@ const Navbar = () => {
           </svg>
         </label>
       </div>
-      <div className="flex-1">Navbar Title</div>
+      <div className="flex-1 text-xl font-bold text-primary">Clean Co</div>
       <div className="flex-none hidden lg:block">
-        <div className="flex gap">
+        <div className="flex gap-2">
           {/* Navbar menu content here */}
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? 'btn btn-primary btn-sm' : 'btn btn-ghost btn-sm'
+            }
+          >
+            Home
+          </NavLink>
           <NavLink
             to="/about"
             className={({ isActive }) =>
