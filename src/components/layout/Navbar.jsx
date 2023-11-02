@@ -55,6 +55,14 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              isActive ? 'btn btn-primary btn-sm' : 'btn btn-ghost btn-sm'
+            }
+          >
+            Services
+          </NavLink>
           {user?.email ? (
             <div className="dropdown dropdown-end ">
               <label tabIndex={0} className="cursor-pointer">

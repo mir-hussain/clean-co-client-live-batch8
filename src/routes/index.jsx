@@ -7,9 +7,10 @@ import Register from '../page/Register';
 import AdminLayout from '../components/layout/AdminLayout';
 import AddService from '../page/AddService';
 import Home from '../page/Home';
-import PrivateRoute from './PrivateRoute';
 import Profile from '../page/Profile';
 import TrackOrder from '../page/TrackOrder';
+import Services from '../page/Services';
+import Booking from '../page/Booking';
 
 const routes = createBrowserRouter([
   {
@@ -22,15 +23,19 @@ const routes = createBrowserRouter([
       },
       {
         path: 'about',
-        element: (
-          <PrivateRoute>
-            <About />
-          </PrivateRoute>
-        ),
+        element: <About />,
       },
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'services',
+        element: <Services />,
+      },
+      {
+        path: 'booking',
+        element: <Booking />,
       },
     ],
   },
