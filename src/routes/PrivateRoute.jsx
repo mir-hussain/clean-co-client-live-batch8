@@ -1,5 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
+import { auth } from '../config/firebase.config';
 
 const PrivateRoute = ({ children }) => {
   const { isLoading, user } = useAuth();
