@@ -8,6 +8,8 @@ import AdminLayout from '../components/layout/AdminLayout';
 import AddService from '../page/AddService';
 import Home from '../page/Home';
 import PrivateRoute from './PrivateRoute';
+import Profile from '../page/Profile';
+import TrackOrder from '../page/TrackOrder';
 
 const routes = createBrowserRouter([
   {
@@ -39,6 +41,20 @@ const routes = createBrowserRouter([
   {
     path: '/register',
     element: <Register />,
+  },
+  {
+    path: '/user',
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Profile />,
+      },
+      {
+        path: 'orders',
+        element: <TrackOrder />,
+      },
+    ],
   },
   {
     path: '/admin',
